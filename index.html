@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="node_modules\@fortawesome\fontawesome-free\css\all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Dashboard</title>
+    <script defer src="renderer.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-between  align-items-baseline mt-4">
+        <h1 class="mb-4 text-center">Dashboard</h1>
+        <button class="border-0 bg-body">
+          <i class="fas fa-sync fa-lg" style="color: #1e1e4d"></i>
+        </button>
+      </div>
+
+      <div class="card mb-4">
+        <div class="summary row p-4 rounded">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Total Products</h5>
+                <p class="card-text fw-bold text-center fs-3">1005</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-center">Outdated Products</h5>
+                <p class="card-text fw-bold text-center fs-3">89</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-center">Out of Stock</h5>
+                <p class="card-text fw-bold text-center fs-3">75</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="actionsAndLog">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <div class="card-body">
+                <h5 class="card-title text-muted">Quick Actions</h5>
+                <div class="d-flex flex-column">
+                  <button class="btn bg-success p-2 text-dark bg-opacity-10 mb-2">
+                    Add single product
+                  </button>
+                  <button class="btn bg-success p-2 text-dark bg-opacity-10 mb-2">
+                    Add bulk product
+                  </button>
+                  <button class="btn bg-success p-2 text-dark bg-opacity-10">Update products</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted">Logs</h5>
+                <div class="log-box">
+                  <!-- Log messages will appear here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
